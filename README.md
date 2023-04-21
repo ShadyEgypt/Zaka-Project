@@ -1,2 +1,2 @@
 # Zaka-Project
-This is the capstone project repo, I'm working Althea and Fakeha
+This is the capstone project repo, I'm working with Althea and Fakeha
