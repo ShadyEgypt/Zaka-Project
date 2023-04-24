@@ -1,8 +1,8 @@
 
-plantVision - v1 2023-04-24 4:14am
+plantVision - v1 2023-04-24 12:26pm
 ==============================
 
-This dataset was exported via roboflow.com on April 24, 2023 at 2:24 AM GMT
+This dataset was exported via roboflow.com on April 24, 2023 at 10:28 AM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -18,7 +18,7 @@ visit https://github.com/roboflow/notebooks
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
 The dataset includes 79 images.
-Leaves are annotated in COCO format.
+Leaves are annotated in COCO Segmentation format.
 
 The following pre-processing was applied to each image:
 * Auto-orientation of pixel data (with EXIF-orientation stripping)
