@@ -58,40 +58,18 @@ while True:
     if len(DP) != 0:
         for i in range(len(detect_params[0])):
             print(i)
+            # Visualize the results on the frame
+            annotated_frame = detect_params[0].plot()
 
-            boxes = detect_params[0].boxes
-            box = boxes[i]  # returns one box
-            clsID = box.cls.numpy()[0] #currently unsure if arrowhead is one or two
-            conf = box.conf.numpy()[0]
-            bb = box.xyxy.numpy()[0]
-
-            cv2.rectangle(
-                frame,
-                (int(bb[0]), int(bb[1])),
-                (int(bb[2]), int(bb[3])),
-                detection_colors[int(clsID)],
-                3,
-            )
-
-            # Display class name and confidence
-            font = cv2.FONT_HERSHEY_COMPLEX #can change
-            cv2.putText(
-                frame,
-                class_list[int(clsID)]
-                + " "
-                + str(round(conf, 3))
-                + "%",
-                (int(bb[0]), int(bb[1]) - 10),
-                font,
-                1,
-                (255, 255, 255),
-                2,
-            )
+    else:
+        # Break the loop if the end of the video is reached
+        break
 
     # Display the resulting frame
-    cv2.imshow('ObjectDetection', frame)
+    cv2.imshow('Greenhouse Plants', annotated_frame)
 
     # Terminate run when "Q" pressed
+    #does not work on vscode terminal, needs to use keyboard interrupt of ctrl + c
     if cv2.waitKey(1) == ord('q'):
         break
 
